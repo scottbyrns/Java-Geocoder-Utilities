@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.scottbyrns.geocoder.cache</groupId>
+    <artifactId>Utility</artifactId>
+
+    <packaging>jar</packaging>
+    <version>1.0.0</version>
+
+
+    <name>
+        Geocoder Cache Utility
+    </name>
+
+    <description>
+        Utility to cache geocoder information from geocoding services like Google Maps API or Open Street Maps.
+    </description>
+
+
+    <url>
+        http://www.github.com/scottbyrns/Geocoder
+    </url>
+
+
+        <dependencies>
+
+            <dependency>
+                <groupId>com.scottbyrns.api</groupId>
+                <artifactId>client</artifactId>
+                <version>1.0.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.scottbyrns</groupId>
+                <artifactId>utilities</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.scottbyrns</groupId>
+                <artifactId>GoogleGeocoderResponseEntities</artifactId>
+                <version>1.0.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-mapper-asl</artifactId>
+                <version>1.6.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.0.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmime</artifactId>
+                <version>4.0.1</version>
+            </dependency>
+
+
+            <!-- Automated Testing -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.5</version>
+            </dependency>
+
+            <!-- Continuous Integration -->
+        </dependencies>
+
+
+
+</project>
