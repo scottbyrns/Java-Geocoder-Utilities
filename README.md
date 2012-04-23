@@ -1,14 +1,25 @@
-Geocoder
-========
+Java Geocoder Utilities
+====================
+So we don't have to build a geocoder wrapper around every new API. Here is a generic interface to geocoding services.
 
-Library for geocoding addresses.
+Usage
+-----
+Simply create a <code>Geocoder</code> and ask it to <code>getTheGeoLocationOf</code> a <code>PhysicalAddress</code>.
 
+```java
+GeoLocation location = Geocoder.getTheLocationOf(new PhysicalAddress());
+```
 
+This will return the location of the provided <code>PhysicalAddress</code>.
 
-Notable Components
-========
+```java
+location.getLatitude();
+location.getLongitude();
+```
 
-Geocoder Cache Utility
-=======
+and to look up a location use
+NOT YET IMPLEMENTED
 
-The geocoder cache utility will retrieve geocoder data for a list of addresses and write it to a json file.
+```java
+Geocoder.getTheAddressOf(new GeoLocation());
+```
