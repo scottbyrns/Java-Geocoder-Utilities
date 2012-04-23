@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.scottbyrns.geocoder.cache</groupId>
+    <groupId>com.scottbyrns.geocoder</groupId>
     <artifactId>Utility</artifactId>
 
     <packaging>jar</packaging>
@@ -25,55 +25,74 @@
     </url>
 
 
-        <dependencies>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
-            <dependency>
-                <groupId>com.scottbyrns.api</groupId>
-                <artifactId>client</artifactId>
-                <version>1.0.1</version>
-            </dependency>
+    <scm>
+        <url>https://github.com/scottbyrns/Java-Geocoder-Utilities</url>
+        <connection>git://github.com/scottbyrns/Java-Geocoder-Utilities.git</connection>
+    </scm>
+    <developers>
+        <developer>
+            <id>scottbyrns</id>
+            <name>Scott Byrns</name>
+            <email>contact@scottbyrns.com</email>
+        </developer>
+    </developers>
 
-            <dependency>
-                <groupId>com.scottbyrns</groupId>
-                <artifactId>utilities</artifactId>
-                <version>1.0.0</version>
-            </dependency>
+    <dependencies>
 
-            <dependency>
-                <groupId>com.scottbyrns</groupId>
-                <artifactId>GoogleGeocoderResponseEntities</artifactId>
-                <version>1.0.1</version>
-            </dependency>
+        <dependency>
+            <groupId>com.scottbyrns.api</groupId>
+            <artifactId>client</artifactId>
+            <version>1.0.1</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.codehaus.jackson</groupId>
-                <artifactId>jackson-mapper-asl</artifactId>
-                <version>1.6.2</version>
-            </dependency>
+        <dependency>
+            <groupId>com.scottbyrns</groupId>
+            <artifactId>utilities</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>4.0.1</version>
-            </dependency>
+        <dependency>
+            <groupId>com.scottbyrns</groupId>
+            <artifactId>GoogleGeocoderResponseEntities</artifactId>
+            <version>1.0.1</version>
+        </dependency>
 
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpmime</artifactId>
-                <version>4.0.1</version>
-            </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>4.0.1</version>
+        </dependency>
 
 
-            <!-- Automated Testing -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.5</version>
-            </dependency>
+        <!-- Automated Testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.5</version>
+        </dependency>
 
-            <!-- Continuous Integration -->
-        </dependencies>
-
+        <!-- Continuous Integration -->
+    </dependencies>
 
 
 </project>
