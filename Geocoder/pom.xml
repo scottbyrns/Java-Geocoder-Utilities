@@ -8,7 +8,7 @@
     <artifactId>Utility</artifactId>
 
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
 
     <name>
@@ -54,9 +54,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.scottbyrns</groupId>
-            <artifactId>utilities</artifactId>
-            <version>1.0.0</version>
+            <groupId>com.scottbyrns.utilities</groupId>
+            <artifactId>json-object-mapper</artifactId>
+            <version>1.0.3</version>
         </dependency>
 
         <dependency>
