@@ -56,6 +56,7 @@ public class TestGeocoder {
     private List<PhysicalAddress> physicalAddressList = new ArrayList<PhysicalAddress>();
 
     public void setUp() {
+//        1257 Kilauea Avenue Hilo, HI 96720
         PhysicalAddress physicalAddress = new PhysicalAddress();
         physicalAddress.setStreetAddress("280 N. 8th St.");
         physicalAddress.setCity("Boise");

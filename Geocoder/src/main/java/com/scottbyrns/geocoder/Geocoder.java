@@ -32,21 +32,24 @@ public class Geocoder {
      */
     private GeocoderService defaultGeocoderService = GeocoderService.GOOGLE_MAPS_API_V3;
 
-    public GeoLocation getTheGeoLocationOf(PhysicalAddress physicalAddress) {
-
+    public GeoLocation getTheGeoLocationOf(String physicalAddress) {
         APIRequest geocoderApiRequest = new APIRequest(defaultGeocoderService.getServiceURI());
         geocoderApiRequest.setRequestUrl("json?address={$address}&sensor={$sensor}");
         geocoderApiRequest.setRequestType(RequestType.GET);
 
-        geocoderApiRequest.addRequestParameter("address", physicalAddress.getFullAddress());
+        geocoderApiRequest.addRequestParameter("address", physicalAddress);
         geocoderApiRequest.addRequestParameter("sensor", "false");
 
-        Response response = (Response)APIClient.getInstance().<Response>makeRequest(geocoderApiRequest).getResponseEntity(Response.class);
+        Response response = (Response)APIClient.getInstance().makeRequest(geocoderApiRequest).getResponseEntity(Response.class);
 
         return new GeoLocation(
                 response.getResults().get(0).getGeometry().getLocation().getLat(),
                 response.getResults().get(0).getGeometry().getLocation().getLng()
         );
+    }
+
+    public GeoLocation getTheGeoLocationOf(PhysicalAddress physicalAddress) {
+        return getTheGeoLocationOf(physicalAddress.getFullAddress());
     }
 
     public List<GeoLocation> geocodeAddressList (List<PhysicalAddress> physicalAddressList) {
