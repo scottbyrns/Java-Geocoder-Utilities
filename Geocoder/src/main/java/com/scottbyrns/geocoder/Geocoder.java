@@ -48,6 +48,19 @@ public class Geocoder {
         );
     }
 
+    public String getTheAddressOf(GeoLocation geoLocation) {
+        APIRequest geocoderApiRequest = new APIRequest(defaultGeocoderService.getServiceURI());
+        geocoderApiRequest.setRequestUrl("json?latlng={$lat},{$lng}&sensor={$sensor}");
+        geocoderApiRequest.setRequestType(RequestType.GET);
+
+        geocoderApiRequest.addRequestParameter("lat", Double.toString(geoLocation.getLatitude()));
+        geocoderApiRequest.addRequestParameter("lng", Double.toString(geoLocation.getLongitude()));
+        geocoderApiRequest.addRequestParameter("sensor", "false");
+
+        Response response = (Response)APIClient.getInstance().makeRequest(geocoderApiRequest).getResponseEntity(Response.class);
+        return response.getResults().get(0).getFormatted_address();
+    }
+
     public GeoLocation getTheGeoLocationOf(PhysicalAddress physicalAddress) {
         return getTheGeoLocationOf(physicalAddress.getFullAddress());
     }

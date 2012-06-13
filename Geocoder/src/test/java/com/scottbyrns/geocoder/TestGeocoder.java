@@ -96,4 +96,11 @@ public class TestGeocoder {
 
 
     }
+
+    @Test
+    public void reverseGeocode () {
+        GeoLocation geoLocation = new GeoLocation(40.714224, -73.961452);
+        String address = Geocoder.getInstance().getTheAddressOf(geoLocation);
+        address.toString();
+    }
 }
