@@ -21,7 +21,7 @@ So we don't have to build a geocoder wrapper around every new API. Here is a gen
 </dependency>
 ```
 
-Usage
+Ussage
 -----
 Simply create a <code>Geocoder</code> and ask it to <code>getTheGeoLocationOf</code> a <code>PhysicalAddress</code>.
 
